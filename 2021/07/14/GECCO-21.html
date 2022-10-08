@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>GECCO’21 Notes and Highlights | Michael Prince</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="GECCO’21 Notes and Highlights" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="GECCO 21 Notes" />
+<meta property="og:description" content="GECCO 21 Notes" />
+<link rel="canonical" href="https://linked-liszt.github.io/2021/07/14/GECCO-21.html" />
+<meta property="og:url" content="https://linked-liszt.github.io/2021/07/14/GECCO-21.html" />
+<meta property="og:site_name" content="Michael Prince" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-07-14T00:00:00-05:00" />
+<script type="application/ld+json">
+{"url":"https://linked-liszt.github.io/2021/07/14/GECCO-21.html","@type":"BlogPosting","headline":"GECCO’21 Notes and Highlights","dateModified":"2021-07-14T00:00:00-05:00","datePublished":"2021-07-14T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://linked-liszt.github.io/2021/07/14/GECCO-21.html"},"description":"GECCO 21 Notes","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://linked-liszt.github.io/feed.xml" title="Michael Prince" />
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Michael Prince</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/">Blog</a><a class="page-link" href="/Publications/">Publications</a><a class="page-link" href="/search/">Search</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">GECCO&#39;21 Notes and Highlights</h1><p class="page-description">GECCO 21 Notes</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-07-14T00:00:00-05:00" itemprop="datePublished">
+        Jul 14, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      4 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#reverse-engineering-core-common-sense-with-the-tools-of-probabilistic-programs-game-style-simulation-engines-and-inductive-program-synthesis">Reverse-engineering Core Common Sense with the Tools of Probabilistic Programs, Game-style Simulation Engines, and Inductive Program Synthesis</a></li>
+<li class="toc-entry toc-h2"><a href="#why-ai-is-harder-than-we-think">Why AI is Harder Than We Think</a></li>
+</ul><p>Editor’s note Sept 2022 - Some incomplete lecture notes from GECCO 2021:</p>
+
+<p><a href="https://gecco-2021.sigevo.org/HomePage">GECCO’21 Site</a></p>
+
+<p>The Genetic and Evolutionary Computation Conference (GECCO), one of the main conferences of the its subfield, concluded recently. This marks the second year that the conference has been completely virtual. As such, many of the talks are available as VODs to easily catch up on, especially since the conference was hosted in the European time zone (approximately starting at 1:00 AM local time). 134 papers and 136 posters were accepted along with the usual battery of tutorials, workshops, and guest speakers.</p>
+
+<h2 id="reverse-engineering-core-common-sense-with-the-tools-of-probabilistic-programs-game-style-simulation-engines-and-inductive-program-synthesis">
+<a class="anchor" href="#reverse-engineering-core-common-sense-with-the-tools-of-probabilistic-programs-game-style-simulation-engines-and-inductive-program-synthesis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reverse-engineering Core Common Sense with the Tools of Probabilistic Programs, Game-style Simulation Engines, and Inductive Program Synthesis</h2>
+
+<p>In this talk, Josh Tenenbaum presents a few approaches, inspired by developmental psychology, to help bridge the gap between the current narrow AI and goal of AGI. Similar to Jeff Clune’s <a href="https://arxiv.org/abs/1905.10985">AI-Generating AI’s</a> and François Chollet’s On the <a href="https://arxiv.org/abs/1911.01547">Measure of Intelligence</a>, many researches are starting to look forward for paths to general intelligence due to the brittleness and diminishing returns of current methods. In order to underscore the point, the lack of progress in self-driving cars were used as an example of ML’s shortcomings.</p>
+
+<p>Their focus has been on understanding and emulating the physics intuition and understanding of young humans, roughly in the age range of 6 months to 1 year. Humans, even at an early age can understand and predict computationally complex physics problems such as predicting whether a tower of wooden blocks will fall. In order to emulate this internal understanding of physics, they turn to fast physics engine approximations, like the ones used in games. Using this, they were able to create a probabilistic physics engine in order to make human-like intuitive predictions. They extended this work by wrapping the engine in a larger system to solve a series of physical problems involving getting a ball to a desired location. In these studies they were able to show that the system mimicked human intuition, in both physics predictions and solutions to physics puzzles. What I found most interesting was that their system often made the same <em>mistakes</em> that human intuition made.</p>
+
+<p><img src="images%5C2021-07-14-GECCO-21%5Cphys_intuition_sim.png" alt="" title="A high level overview of the intuitive physics engine"></p>
+
+<p>The second segment of the talk discussed integrating learning to their systems. This learning integration is still a work in progress, and is also why the researchers were interested in targeting the GECCO community. Similar to Chollet, they believe that knowledge and intelligence can be embedded in the space of algorithms. By adding the learning component, they believe that we will be one step closer to emulating the human model of common sense and understanding. To wrap up, they showed some work similar to primitive granularity control, <a href="https://arxiv.org/abs/2006.08381">DreamCoder</a> which was able to learn how to solve problems in different domains by building up specialized functions to assemble higher level solutions.</p>
+
+<h2 id="why-ai-is-harder-than-we-think">
+<a class="anchor" href="#why-ai-is-harder-than-we-think" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why AI is Harder Than We Think</h2>
+
+<p>Similar to the previous talk, this this talk focused on bridging the gap between narrow and general AI. However, rather than presenting a singular research direction, the focus was on common fallacies held by AI researchers and open challenges in the field that may lead towards general AI. In another parallel to the previous presentations, lack of progress in self-driving cars were used to underscore the main points of the presentation. In addition to self-driving cars, the presenter compared the optimism of today’s researchers to the optimism of researchers in the late 20th century, right before the first AI winter. On the other hand, while some prominent AI researchers may be optimistic, expecting general AI to be realized within the next 10-20 years, according to this prominent <a href="https://www.nickbostrom.com/papers/survey.pdf">survey</a> that was making the rounds not too long ago, most researchers expect AGI to be 50+ years away.</p>
+
+<p>To start out, 4 fallacies were presented:</p>
+
+<ul>
+  <li>Narrow AI is necessarily a pathway to general AI</li>
+  <li>Easy tasks for humans are not necessarily the easy tasks to computerize and vice versa</li>
+  <li>Wishful mnemonics are particularly dangerous, even for experts</li>
+  <li>Intelligence may not be located just in the brain</li>
+</ul>
+
+<p>Of the four points presented, wishful mnemonics stands out the most to me. Even among experts, we use terms like “learning”, “goals”, and “behaviors” to describe how AI algorithms operate. This can give a very skewed perception of the field to outsiders. Not to mention the marketing of AI solutions we’re seeing in industry. However, this is a tough problem to fix. The existing vocabulary is convenient to use. Of all the concerns, this separation in expectations brought by the framing and language of the field may cause disillusionment and the next AI winter. There are many tasks where ML has been revolutionary, like in computer vision, but we must be careful not to mix up the perception of narrow AI with AGI or biological intelligence.</p>
+
+<p>Following the fallacies, 5 open problems were laid out as key tasks to general AI:</p>
+
+<ul>
+  <li>Few-Shot Learning</li>
+  <li>Generalization</li>
+  <li>Abstraction and Analogy</li>
+  <li>Transparency &amp; Robustness</li>
+  <li>Understanding and common sense</li>
+</ul>
+
+  </div><a class="u-url" href="/2021/07/14/GECCO-21.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+      </div>
+      <div class="footer-col">
+        <p>Grad Student Descent Is All You Need</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/linked-liszt" target="_blank" title="linked-liszt"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer></body>
+
+</html>
