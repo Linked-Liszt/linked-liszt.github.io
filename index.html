@@ -1,110 +1,389 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Michael Prince | Grad Student Descent Is All You Need</title>
-<meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Michael Prince" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Grad Student Descent Is All You Need" />
-<meta property="og:description" content="Grad Student Descent Is All You Need" />
-<link rel="canonical" href="https://linked-liszt.github.io/" />
-<meta property="og:url" content="https://linked-liszt.github.io/" />
-<meta property="og:site_name" content="Michael Prince" />
-<script type="application/ld+json">
-{"url":"https://linked-liszt.github.io/","@type":"WebSite","headline":"Michael Prince","name":"Michael Prince","description":"Grad Student Descent Is All You Need","@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://linked-liszt.github.io/feed.xml" title="Michael Prince" />
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Michael H. Prince — Reprint</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+  /* committed single-theme: journal reprint on paper */
+  :root{ --paper:#faf8f2; --ink:#1c1712; --faint:#6b6357; --rule:#1c1712; }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font:16px/1.68 Georgia,"Times New Roman",serif;}
+  a{color:var(--ink);text-decoration:underline;text-underline-offset:2.5px;
+    text-decoration-thickness:1px;}
+  a:hover{background:#efe9da;}
+  a:focus-visible{outline:2px solid var(--ink);outline-offset:2px;}
 
+  .page{max-width:720px;margin:0 auto;padding:44px 24px 60px;}
+  .masthead{display:flex;justify-content:space-between;font-size:12px;
+    font-style:italic;color:var(--faint);border-bottom:1.5px solid var(--rule);
+    padding-bottom:6px;}
+  .titleblock{text-align:center;margin:38px 0 30px;}
+  .titleblock h1{font-size:27px;font-weight:600;letter-spacing:.12em;
+    text-transform:uppercase;margin:0 0 10px;font-variant:small-caps;}
+  .titleblock .affil{font-style:italic;font-size:15px;margin:0;}
+  .titleblock .affil a{text-decoration:none;border-bottom:1px dotted var(--faint);}
+  .titleblock .rec{font-size:12px;color:var(--faint);margin-top:10px;}
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+  .abstract{margin:0 auto 34px;max-width:60ch;font-size:14.5px;line-height:1.62;
+    text-align:justify;}
+  .abstract .lead{font-weight:700;font-variant:small-caps;letter-spacing:.04em;}
 
-<script>
-function wrap_img(fn) {
-    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
-        var elements = document.querySelectorAll(".post img");
-        Array.prototype.forEach.call(elements, function(el, i) {
-            if (el.getAttribute("title") && (el.className != "emoji")) {
-                const caption = document.createElement('figcaption');
-                var node = document.createTextNode(el.getAttribute("title"));
-                caption.appendChild(node);
-                const wrapper = document.createElement('figure');
-                wrapper.className = 'image';
-                el.parentNode.insertBefore(wrapper, el);
-                el.parentNode.removeChild(el);
-                wrapper.appendChild(el);
-                wrapper.appendChild(caption);
-            }
-        });
-    } else { document.addEventListener('DOMContentLoaded', fn); }
-}
-window.onload = wrap_img;
-</script>
+  figure{margin:0 0 38px;}
+  #banner{position:relative;height:clamp(240px,32vh,300px);background:#faf8f2;
+    touch-action:none;cursor:grab;overflow:hidden;}
+  #banner canvas{position:absolute;inset:0;width:100%;height:100%;display:block;}
+  figcaption{font-size:13px;line-height:1.5;margin-top:10px;color:var(--ink);}
+  figcaption b{font-weight:700;}
 
-<script>
-    document.addEventListener("DOMContentLoaded", function(){
-    // add link icon to anchor tags
-    var elem = document.querySelectorAll(".anchor-link")
-    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
-    });
-</script>
+  h2{font-size:16px;font-weight:600;font-variant:small-caps;letter-spacing:.1em;
+    margin:36px 0 12px;text-align:center;}
+  h2::after{content:"";display:block;width:64px;height:1px;background:var(--rule);
+    margin:8px auto 0;}
+  p{margin:0 0 13px;text-align:justify;}
+
+  .refs{font-size:14.5px;}
+  .refs ol{margin:0;padding:0;list-style:none;counter-reset:ref;}
+  .refs li{counter-increment:ref;padding-left:34px;position:relative;margin-bottom:14px;
+    text-align:justify;}
+  .refs li::before{content:"[" counter(ref) "]";position:absolute;left:0;font-weight:700;}
+  .refs .plinks{font-size:13px;}
+
+  .fin{text-align:center;margin-top:44px;color:var(--faint);font-style:italic;
+    font-size:13.5px;}
+  .fin::before{content:"— ";}
+  .fin::after{content:" —";}
+</style>
 </head>
-<body><header class="site-header">
+<body>
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/">Michael Prince</a><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-            </svg>
-          </span>
-        </label>
-
-        <div class="trigger"><a class="page-link" href="/blog/">Blog</a><a class="page-link" href="/Publications/">Publications</a><a class="page-link" href="/search/">Search</a></div>
-      </nav></div>
-</header>
-<main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <article class="post">
-
-  <header class="post-header">
-    <h1 class="post-title"></h1>
-  </header>
-
-  <div class="post-content">
-    <p>Software Engineer at the <a href="https://www.aps.anl.gov/">Advanced Photon Source</a></p>
-
-<p>Research interests include: <code class="language-plaintext highlighter-rouge">[Machine Learning, Evolutionary Computing, Deep Learning, Reinforcement Learning]</code> and their applications in <code class="language-plaintext highlighter-rouge">[SciML, Robotics, Embedded, Space Systems, Economics]</code>.</p>
-
-<p>Feel free to check out my <a href="https://github.com/Linked-Liszt/">GitHub</a>, <a href="https://www.linkedin.com/in/michael-prince-121780156/">LinkedIn</a>, and <a href="https://scholar.google.com/citations?user=_xBYptEAAAAJ">Google Scholar</a>. Preprints are available at the <a href="/Publications">publications</a> page of this site.</p>
-
+<div class="page">
+  <div class="masthead">
+    <span>Personal Communications</span>
+    <span>Vol. 1 · Rev. 2026</span>
   </div>
 
-</article>
+  <div class="titleblock">
+    <h1>Michael H. Prince</h1>
+    <p class="affil">Software Engineer, <a href="https://www.aps.anl.gov/">Advanced
+      Photon Source</a>, Argonne National Laboratory</p>
+    <p class="rec">(Received continuously; accepted with minor revisions)</p>
+  </div>
 
-      </div>
-    </main><footer class="site-footer h-card">
-  <data class="u-url" href="/"></data>
+  <p class="abstract"><span class="lead">Abstract — </span>His work is a
+    mix of scientific software engineering and machine learning research with engineering efforts across
+    GUI development, data pipelines, and HPC-scale analysis code. His research interests include
+    foundation models, AI agents, and data-driven methods for accelerating scientific work and
+    extracting insight from large-scale datasets. (He notes that he is very easily nerd-sniped.)
+    Correspondence via
+    <a href="https://github.com/Linked-Liszt/">GitHub</a>,
+    <a href="https://www.linkedin.com/in/michael-prince-121780156/">LinkedIn</a>, or
+    <a href="https://scholar.google.com/citations?user=_xBYptEAAAAJ">Google Scholar</a>.</p>
 
-  <div class="wrapper">
+  <figure>
+    <div id="banner"><canvas id="bcv"></canvas></div>
+    <figcaption><b>Fig. 1.</b> Live stylized simulation, SrTiO<sub>3</sub> with polychromatic beam. The specimen may be
+      reoriented by dragging.</figcaption>
+  </figure>
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col">
-      </div>
-      <div class="footer-col">
-        <p>Grad Student Descent Is All You Need</p>
-      </div>
-    </div>
+  <h2>Background</h2>
+  <p>Prior to Argonne, the author worked in SaaS development as an
+    undergraduate co-op and contributed to small satellite flight software.
+    During graduate school he worked on evolutionary computing applied to
+    DOE advanced manufacturing.</p>
 
-    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/linked-liszt" target="_blank" title="linked-liszt"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li></ul>
+  <h2>References</h2>
+  <div class="refs">
+    <ol>
+      <li>Andrejevic, N., Du, M., Sharma, H., Horwath, J. P., Luo, A., Yin, X.,
+        <b>Prince, M.</b> et al. AlphaDiffract: automated crystallographic analysis of
+        powder X-ray diffraction data. <i>arXiv</i> 2603.23367 (2026).
+        <span class="plinks"><a href="https://arxiv.org/abs/2603.23367">arXiv</a></span>
+      </li>
+      <li>Sainju, R., Dariusz, J., Shang, H., <b>Prince, M.</b>, Aydelott, R.,
+        Cherukara, M., Sun, Y. et al. APS-RAG: a domain-aware hybrid retrieval
+        augmented generation system for accelerator operations and knowledge synthesis.
+        (In preparation.)
+      </li>
+      <li>Vriza, A., <b>Prince, M. H.</b>, Zhou, T., Chan, H. &amp; Cherukara, M. J.
+        Operating advanced scientific instruments with AI agents that learn on the job.
+        <i>npj Computational Materials</i> 12, 160 (2026).
+        <span class="plinks">
+          <a href="https://www.nature.com/articles/s41524-026-02005-0">Article</a> ·
+          <a href="https://arxiv.org/abs/2509.00098">arXiv</a>
+        </span>
+      </li>
+      <li><b>Prince, M. H.</b>, Chan, H., Vriza, A., Zhou, T., Sastry, V. K., Luo, Y.,
+        Dearing, M. T. et al. Opportunities for retrieval and tool augmented large
+        language models in scientific facilities. <i>npj Computational Materials</i>
+        10, 251 (2024).
+        <span class="plinks">
+          <a href="https://www.nature.com/articles/s41524-024-01423-2">Article</a> ·
+          <a href="https://arxiv.org/abs/2312.01291">arXiv</a>
+        </span>
+      </li>
+      <li><b>Prince, M.</b>, Gürsoy, D., Sheyfer, D., Chard, R., Côté, B., Parraga, H.,
+        Frosik, B. et al. Demonstrating cross-facility data processing at scale with
+        Laue microdiffraction. <i>SC'23 Workshops</i> (2023).
+        <span class="plinks">
+          <a href="https://dl.acm.org/doi/10.1145/3624062.3624613">Article</a>
+        </span>
+      </li>
+      <li><b>Prince, M. H.</b>, DeHaan, K. &amp; Tauritz, D. R. A multi-objective
+        evolutionary algorithm approach for optimizing part quality aware assembly job
+        shop scheduling problems. <i>EvoApplications</i> (2021).
+        <span class="plinks">
+          <a href="assets/docs/MOEA_Part_AJSSP.pdf">Preprint</a> ·
+          <a href="https://link.springer.com/chapter/10.1007/978-3-030-72699-7_7">Article</a>
+        </span>
+      </li>
+      <li><b>Prince, M. H.</b>, McGehee, A. J. &amp; Tauritz, D. R. EDM-DRL: toward
+        stable reinforcement learning through ensembled directed mutation.
+        <i>EvoApplications</i> (2021).
+        <span class="plinks">
+          <a href="assets/docs/EDM_DRL.pdf">Preprint</a> ·
+          <a href="https://link.springer.com/chapter/10.1007/978-3-030-72699-7_18">Article</a>
+        </span>
+      </li>
+    </ol>
+  </div>
+
+  <p class="fin">Grad Student Descent Is All You Need</p>
 </div>
 
-  </div>
+<script>
+(function(){
+  "use strict";
+  var TAU=Math.PI*2;
+  var bn=document.getElementById("banner");
+  var cv=document.getElementById("bcv");
+  var ctx=cv.getContext("2d");
+  var W=0,H=0,fno=0;
+  var mouse={x:-9e3,y:-9e3,inside:false,down:false};
+  var drag={dx:0,dy:0};
 
-</footer></body>
+  function clamp(v,a,b){return v<a?a:(v>b?b:v);}
+  function gauss(){var u=0,v=0;while(!u)u=Math.random();while(!v)v=Math.random();
+    return Math.sqrt(-2*Math.log(u))*Math.cos(TAU*v);}
 
+  /* SrTiO3 perovskite: 5-atom basis, graded structure factors */
+  var A0=3.905;
+  var BASIS=[
+    { r:[0,0,0],       f:38, s:1.35, t:2 },
+    { r:[0.5,0.5,0.5], f:22, s:1.0,  t:0 },
+    { r:[0.5,0.5,0],   f:8,  s:0.6,  t:1 },
+    { r:[0.5,0,0.5],   f:8,  s:0.6,  t:1 },
+    { r:[0,0.5,0.5],   f:8,  s:0.6,  t:1 }
+  ];
+  var gs=[], atoms=[];
+  (function(){
+    var sumf=0,wmax=0,h,k,l,i;
+    for(i=0;i<BASIS.length;i++)sumf+=BASIS[i].f;
+    for(h=-5;h<=5;h++)for(k=-5;k<=5;k++)for(l=-5;l<=5;l++){
+      if(!h&&!k&&!l)continue;
+      var mag=Math.sqrt(h*h+k*k+l*l)/A0;
+      if(mag>1.35)continue;
+      var re=0,im=0;
+      for(i=0;i<BASIS.length;i++){
+        var ph=TAU*(h*BASIS[i].r[0]+k*BASIS[i].r[1]+l*BASIS[i].r[2]);
+        re+=BASIS[i].f*Math.cos(ph); im+=BASIS[i].f*Math.sin(ph);
+      }
+      var rel=(re*re+im*im)/(sumf*sumf);
+      if(rel<7e-4)continue;
+      var w=rel*Math.exp(-Math.pow(mag/0.95,2));
+      if(w>wmax)wmax=w;
+      gs.push({gx:h/A0,gy:k/A0,gz:l/A0,mag:mag,w:w,flare:0,seen:-1,sx:0,sy:0});
+    }
+    for(i=0;i<gs.length;i++)gs[i].w/=wmax;
+    for(h=-1;h<=1;h++)for(k=-1;k<=1;k++)for(l=-1;l<=1;l++)
+      for(i=0;i<BASIS.length;i++)
+        atoms.push([h+BASIS[i].r[0],k+BASIS[i].r[1],l+BASIS[i].r[2],
+          BASIS[i].t,BASIS[i].s]);
+    var mx=0,my=0,mz=0;
+    for(i=0;i<atoms.length;i++){mx+=atoms[i][0];my+=atoms[i][1];mz+=atoms[i][2];}
+    mx/=atoms.length;my/=atoms.length;mz/=atoms.length;
+    var mr=0;
+    for(i=0;i<atoms.length;i++){
+      atoms[i][0]-=mx;atoms[i][1]-=my;atoms[i][2]-=mz;
+      var r=Math.hypot(atoms[i][0],atoms[i][1],atoms[i][2]);
+      if(r>mr)mr=r;
+    }
+    for(i=0;i<atoms.length;i++){atoms[i][0]*=2.2/mr;atoms[i][1]*=2.2/mr;atoms[i][2]*=2.2/mr;}
+  })();
+
+  var axB=0.42, ayB=0.2, axo=0, ayo=0;
+  var parts=[], flashes=[];
+  var lx,ly,S,dx0,dx1,dy0,dy1,dcx,dcy,Dsc;
+
+  function layout(){
+    lx=W*0.18; ly=H*0.52; S=H*0.10;
+    dx0=W*0.50; dx1=W*0.97; dy0=H*0.05; dy1=H*0.95;
+    dcx=(dx0+dx1)/2; dcy=(dy0+dy1)/2;
+    Dsc=(dy1-dy0)*0.40;
+    parts=[]; flashes=[];
+    ctx.globalCompositeOperation="source-over";
+    ctx.fillStyle="#faf8f2"; ctx.fillRect(0,0,W,H);
+  }
+
+  function frame(t,dt){
+    var axoT=0,ayoT=0;
+    if(mouse.down&&mouse.inside){
+      ayB+=drag.dx*0.005;
+      axB=clamp(axB+drag.dy*0.005,-1.3,1.3);
+    }else{
+      ayB+=dt*0.05;
+      if(mouse.inside){
+        axoT=(mouse.y/H-0.5)*0.3;
+        ayoT=(mouse.x/W-0.5)*0.35;
+      }
+    }
+    axo+=(axoT-axo)*Math.min(1,dt*2.5);
+    ayo+=(ayoT-ayo)*Math.min(1,dt*2.5);
+    var ax=clamp(axB+axo,-1.4,1.4), ay=ayB+ayo;
+    var cy_=Math.cos(ay),sy_=Math.sin(ay),cx_=Math.cos(ax),sx_=Math.sin(ax);
+
+    var vis=[],total=0,i;
+    for(i=0;i<gs.length;i++){
+      var g=gs[i];
+      var x1=cy_*g.gx+sy_*g.gz, z1=-sy_*g.gx+cy_*g.gz;
+      var y2=cx_*g.gy-sx_*z1,  z2=sx_*g.gy+cx_*z1;
+      var ux=x1/g.mag, uy=y2/g.mag, uz=z2/g.mag;
+      if(ux>=-0.02)continue;
+      var ox=1-2*ux*ux; if(ox<0.14)continue;
+      var E=12.398*g.mag/(2*(-ux));
+      var dE=(E-14)/15, Sp=Math.exp(-dE*dE*dE*dE);
+      var I=g.w*Sp; if(I<0.02)continue;
+      var px=dcx+(-2*ux*uy/ox)*Dsc, py=dcy+(-2*ux*uz/ox)*Dsc;
+      if(px<dx0+8||px>dx1-8||py<dy0+8||py>dy1-8)continue;
+      g.sx=px;g.sy=py;g.seen=fno;
+      total+=I;
+      vis.push({g:g,px:px,py:py,I:I,E:E});
+    }
+
+    /* print render: emulsion plate, ink spots, no glow */
+    ctx.globalCompositeOperation="source-over";
+    ctx.fillStyle="rgba(250,248,242,0.35)";
+    ctx.fillRect(0,0,W,H);
+
+    ctx.setLineDash([8,20]); ctx.lineDashOffset=-t*60;
+    ctx.strokeStyle="rgba(60,50,38,0.4)"; ctx.lineWidth=1;
+    ctx.beginPath(); ctx.moveTo(0,ly); ctx.lineTo(lx,ly); ctx.stroke();
+    ctx.setLineDash([]);
+
+    ctx.fillStyle="#fdfcf8";
+    ctx.strokeStyle="#1c1712"; ctx.lineWidth=1.2;
+    ctx.fillRect(dx0,dy0,dx1-dx0,dy1-dy0);
+    ctx.strokeRect(dx0,dy0,dx1-dx0,dy1-dy0);
+
+    for(i=0;i<atoms.length;i++){
+      var p=atoms[i];
+      var ax1=cy_*p[0]+sy_*p[2], az1=-sy_*p[0]+cy_*p[2];
+      var ay2=cx_*p[1]-sx_*az1, az2=sx_*p[1]+cx_*az1;
+      var depth=(az2+2.4)/4.8;
+      var ac = p[3]===2 ? "rgba(45,36,24,"
+        : (p[3]===1 ? "rgba(130,115,90," : "rgba(75,62,45,");
+      ctx.fillStyle=ac+(0.25+0.5*depth).toFixed(3)+")";
+      ctx.beginPath();
+      ctx.arc(lx+S*ax1, ly+S*ay2, (0.8+1.4*depth)*p[4], 0, TAU);
+      ctx.fill();
+    }
+
+    for(i=0;i<vis.length;i++){
+      var v=vis[i];
+      v.g.flare*=Math.exp(-3*dt);
+      var I2=Math.min(1,v.I+v.g.flare*0.8);
+      ctx.fillStyle="rgba(48,38,26,"+(0.08+0.16*I2).toFixed(3)+")";
+      ctx.beginPath(); ctx.arc(v.px,v.py,2+8*I2,0,TAU); ctx.fill();
+      ctx.fillStyle="rgba(38,30,20,"+(0.35+0.6*I2).toFixed(3)+")";
+      ctx.beginPath(); ctx.arc(v.px,v.py,1+3*I2,0,TAU); ctx.fill();
+    }
+    ctx.fillStyle="rgba(38,30,20,0.85)";
+    ctx.beginPath(); ctx.arc(dcx,dcy,2.2,0,TAU); ctx.fill();
+
+    var n=40*dt; n=(n|0)+(Math.random()<n%1?1:0);
+    for(i=0;i<n&&parts.length<240;i++)
+      parts.push({st:0,x:-12,y:ly+gauss()*2.5,tx:lx+gauss()*2,ty:ly+gauss()*2,ref:null});
+
+    var spd=W*0.62;
+    for(i=parts.length-1;i>=0;i--){
+      var pp=parts[i];
+      if(pp.st===1&&pp.ref&&pp.ref.seen===fno){pp.tx=pp.ref.sx;pp.ty=pp.ref.sy;}
+      var ddx=pp.tx-pp.x, ddy=pp.ty-pp.y;
+      var dl=Math.hypot(ddx,ddy)||1, step=spd*dt;
+      if(dl<=step){
+        if(pp.st===0){
+          pp.st=1;pp.x=pp.tx;pp.y=pp.ty;
+          if(vis.length&&Math.random()<0.82){
+            var r=Math.random()*total,acc=0,pick=vis[0];
+            for(var j=0;j<vis.length;j++){acc+=vis[j].I;if(r<=acc){pick=vis[j];break;}}
+            pp.tx=pick.px;pp.ty=pick.py;pp.ref=pick.g;
+          }else{pp.tx=dcx;pp.ty=dcy;pp.ref=null;}
+        }else{
+          if(pp.ref)pp.ref.flare=Math.min(1.5,pp.ref.flare+0.5);
+          flashes.push({x:pp.tx,y:pp.ty,life:0});
+          parts.splice(i,1);
+          continue;
+        }
+      }else{pp.x+=ddx/dl*step;pp.y+=ddy/dl*step;}
+      ctx.strokeStyle="rgba(60,50,38,0.45)"; ctx.lineWidth=1;
+      ctx.beginPath();
+      ctx.moveTo(pp.x,pp.y);
+      ctx.lineTo(pp.x-ddx/dl*10,pp.y-ddy/dl*10);
+      ctx.stroke();
+    }
+
+    for(i=flashes.length-1;i>=0;i--){
+      var fl=flashes[i];
+      fl.life+=dt;
+      if(fl.life>0.35){flashes.splice(i,1);continue;}
+      var fr=fl.life/0.35;
+      ctx.strokeStyle="rgba(48,38,26,"+(0.4*(1-fr)).toFixed(3)+")";
+      ctx.lineWidth=1;
+      ctx.beginPath(); ctx.arc(fl.x,fl.y,2+13*fr,0,TAU); ctx.stroke();
+    }
+  }
+
+  function resize(){
+    var r=bn.getBoundingClientRect();
+    W=r.width;H=r.height;
+    var dpr=Math.min(2,window.devicePixelRatio||1);
+    cv.width=Math.round(W*dpr); cv.height=Math.round(H*dpr);
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    layout();
+  }
+  new ResizeObserver(resize).observe(bn);
+
+  bn.addEventListener("pointermove",function(e){
+    var r=bn.getBoundingClientRect();
+    var nx=e.clientX-r.left, ny=e.clientY-r.top;
+    if(mouse.down){drag.dx+=nx-mouse.x;drag.dy+=ny-mouse.y;}
+    mouse.x=nx;mouse.y=ny;mouse.inside=true;
+  });
+  bn.addEventListener("pointerdown",function(e){
+    mouse.down=true;bn.setPointerCapture(e.pointerId);
+  });
+  bn.addEventListener("pointerup",function(){mouse.down=false;});
+  bn.addEventListener("pointerleave",function(){
+    if(!mouse.down){mouse.inside=false;mouse.x=-9e3;mouse.y=-9e3;}
+  });
+
+  var reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var playing=!reduced;
+  if(reduced) bn.addEventListener("pointerup",function(){playing=!playing;});
+
+  var lastT=0;
+  function loop(ts){
+    var t=ts/1000, dt=clamp(t-lastT,0,0.05);
+    lastT=t;
+    if(W>0&&(playing||t<0.5))frame(t,dt);
+    fno++; drag.dx=0; drag.dy=0;
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+})();
+</script>
+
+</body>
 </html>
