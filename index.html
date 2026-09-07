@@ -6,65 +6,78 @@
 <title>Michael H. Prince — Reprint</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <style>
-  /* committed single-theme: journal reprint on paper */
-  :root{ --paper:#faf8f2; --ink:#1c1712; --faint:#6b6357; --rule:#1c1712; }
+  :root{ --paper:#ffffff; --ink:#000000; --rule:#000000; --link:#0000ee; --visited:#551a8b; }
   *{box-sizing:border-box}
   body{margin:0;background:var(--paper);color:var(--ink);
-    font:16px/1.68 Georgia,"Times New Roman",serif;}
-  a{color:var(--ink);text-decoration:underline;text-underline-offset:2.5px;
-    text-decoration-thickness:1px;}
-  a:hover{background:#efe9da;}
+    font:17px/1.55 "Times New Roman",Times,"Nimbus Roman","Liberation Serif",serif;
+    hyphens:auto;}
+  a{color:var(--link);}
+  a:visited{color:var(--visited);}
   a:focus-visible{outline:2px solid var(--ink);outline-offset:2px;}
 
-  .page{max-width:720px;margin:0 auto;padding:44px 24px 60px;}
-  .masthead{display:flex;justify-content:space-between;font-size:12px;
-    font-style:italic;color:var(--faint);border-bottom:1.5px solid var(--rule);
-    padding-bottom:6px;}
-  .titleblock{text-align:center;margin:38px 0 30px;}
-  .titleblock h1{font-size:27px;font-weight:600;letter-spacing:.12em;
-    text-transform:uppercase;margin:0 0 10px;font-variant:small-caps;}
-  .titleblock .affil{font-style:italic;font-size:15px;margin:0;}
-  .titleblock .affil a{text-decoration:none;border-bottom:1px dotted var(--faint);}
-  .titleblock .rec{font-size:12px;color:var(--faint);margin-top:10px;}
+  .page{max-width:720px;margin:0 auto;padding:40px 24px 56px;}
+  .masthead{font-size:13px;font-style:italic;
+    border-bottom:1px solid var(--rule);padding-bottom:5px;}
+  .titleblock{text-align:center;margin:36px 0 28px;}
+  .titleblock h1{font-size:26px;font-weight:700;margin:0 0 8px;}
+  .titleblock p{text-align:center;}
+  .titleblock .affil{font-style:italic;font-size:16px;margin:0;}
+  .titleblock .rec{font-size:13px;font-style:italic;margin-top:8px;}
 
-  .abstract{margin:0 auto 34px;max-width:60ch;font-size:14.5px;line-height:1.62;
+  .abstract{margin:0 auto 32px;max-width:60ch;font-size:15px;line-height:1.5;
     text-align:justify;}
-  .abstract .lead{font-weight:700;font-variant:small-caps;letter-spacing:.04em;}
+  .abstract .lead{font-weight:700;}
 
-  figure{margin:0 0 38px;}
-  #banner{position:relative;height:clamp(240px,32vh,300px);background:#faf8f2;
+  figure{margin:0 0 36px;}
+  #banner{position:relative;height:clamp(240px,32vh,300px);background:var(--paper);
     touch-action:none;cursor:grab;overflow:hidden;}
   #banner canvas{position:absolute;inset:0;width:100%;height:100%;display:block;}
-  figcaption{font-size:13px;line-height:1.5;margin-top:10px;color:var(--ink);}
+  figcaption{font-size:14px;line-height:1.45;margin-top:10px;}
   figcaption b{font-weight:700;}
 
-  h2{font-size:16px;font-weight:600;font-variant:small-caps;letter-spacing:.1em;
-    margin:36px 0 12px;text-align:center;}
-  h2::after{content:"";display:block;width:64px;height:1px;background:var(--rule);
-    margin:8px auto 0;}
+  h2{font-size:17px;font-weight:700;margin:32px 0 10px;}
   p{margin:0 0 12px;text-align:justify;}
-  .background-copy{font-size:14.5px;line-height:1.62;}
+  .background-copy{font-size:15px;line-height:1.5;}
 
-  .refs{font-size:14.5px;}
+  .refs{font-size:15px;}
   .refs ol{margin:0;padding:0;list-style:none;counter-reset:ref;}
-  .refs li{counter-increment:ref;padding-left:34px;position:relative;margin-bottom:14px;
+  .refs li{counter-increment:ref;padding-left:34px;position:relative;margin-bottom:12px;
     text-align:justify;}
-  .refs li::before{content:"[" counter(ref) "]";position:absolute;left:0;font-weight:700;}
-  .refs .plinks{font-size:13px;}
+  .refs li::before{content:"[" counter(ref) "]";position:absolute;left:0;}
+  .refs .plinks{font-size:14px;}
 
-  .fin{text-align:center;margin-top:44px;color:var(--faint);font-style:italic;
-    font-size:13.5px;}
-  .fin::before{content:"— ";}
-  .fin::after{content:" —";}
+  .fin{text-align:center;margin-top:40px;font-style:italic;
+    font-size:14px;}
+  /* manuscript line numbers (screen, wide viewports only) */
+  .page{position:relative;}
+  .lineno{display:none;position:absolute;top:0;left:-44px;width:36px;
+    text-align:right;font-size:10px;line-height:1;pointer-events:none;
+    user-select:none;}
+  .lineno span{position:absolute;right:0;}
+  @media (min-width:860px){ .lineno{display:block;} }
+
+  @media print{
+    @page{ size:auto; margin:22mm 20mm;
+      @bottom-center{ content:counter(page); font:10pt "Times New Roman",Times,serif; } }
+    body{font-size:11pt;line-height:1.4;background:#fff;color:#000;}
+    .page{max-width:none;padding:0;}
+    .lineno{display:none;}
+    a{color:#000;text-decoration:none;}
+    .affil a{border:0;}
+    figure,.refs li{break-inside:avoid;}
+    #banner{height:70mm;cursor:auto;}
+    .abstract{font-size:10pt;}
+    .background-copy,.refs{font-size:10pt;}
+    figcaption,.refs .plinks{font-size:9pt;}
+    .fin{margin-top:14mm;}
+  }
 </style>
 </head>
 <body>
 
 <div class="page">
-  <div class="masthead">
-    <span>Personal Communications</span>
-    <span>Vol. 1 · Rev. 2026</span>
-  </div>
+  <div class="lineno" aria-hidden="true"></div>
+  <div class="masthead">Personal Communications</div>
 
   <div class="titleblock">
     <h1>Michael H. Prince</h1>
@@ -90,29 +103,35 @@
   </figure>
 
   <h2>Background</h2>
-  <p class="background-copy">Prior to Argonne, the author worked in SaaS development as an
-    undergraduate co-op and contributed to small satellite flight software development.
+  <p class="background-copy">Prior to Argonne, the author worked in SaaS as an
+    undergraduate co-op SDET and contributed to small satellite flight software development.
     During graduate school he worked on evolutionary computing applied to
     DOE advanced manufacturing.</p>
 
   <h2>References</h2>
   <div class="refs">
     <ol>
+      <li>Yin, X., Du, M., <b>Prince, M. H.</b> &amp; Cherukara, M. J. Artifact-centered
+        claim-aware observability for autonomous scientific agents. <i>arXiv</i>
+        2608.18312 (2026).
+        <span class="plinks"><a href="https://arxiv.org/abs/2608.18312">arXiv</a></span>
+      </li>
+      <li>Sainju, R., Jarosz, D., Shang, H., <b>Prince, M.</b>, Aydelott, R. M.,
+        Cherukara, M. J. et al. A corrective agentic hybrid RAG and an
+        operations-grounded evaluation for a scientific facility. <i>arXiv</i>
+        2607.24663 (2026).
+        <span class="plinks"><a href="https://arxiv.org/abs/2607.24663">arXiv</a></span>
+      </li>
       <li>Andrejevic, N., Du, M., Sharma, H., Horwath, J. P., Luo, A., Yin, X.,
         <b>Prince, M.</b> et al. AlphaDiffract: automated crystallographic analysis of
         powder X-ray diffraction data. <i>arXiv</i> 2603.23367 (2026).
         <span class="plinks"><a href="https://arxiv.org/abs/2603.23367">arXiv</a></span>
       </li>
-      <li>Sainju, R., Dariusz, J., Shang, H., <b>Prince, M.</b>, Aydelott, R.,
-        Cherukara, M., Sun, Y. et al. APS-RAG: a domain-aware hybrid retrieval
-        augmented generation system for accelerator operations and knowledge synthesis.
-        (In preparation.)
-      </li>
       <li>Vriza, A., <b>Prince, M. H.</b>, Zhou, T., Chan, H. &amp; Cherukara, M. J.
         Operating advanced scientific instruments with AI agents that learn on the job.
         <i>npj Computational Materials</i> 12, 160 (2026).
         <span class="plinks">
-          <a href="https://www.nature.com/articles/s41524-026-02005-0">Article</a> ·
+          <a href="https://www.nature.com/articles/s41524-026-02005-0">Article</a>,
           <a href="https://arxiv.org/abs/2509.00098">arXiv</a>
         </span>
       </li>
@@ -121,7 +140,7 @@
         language models in scientific facilities. <i>npj Computational Materials</i>
         10, 251 (2024).
         <span class="plinks">
-          <a href="https://www.nature.com/articles/s41524-024-01423-2">Article</a> ·
+          <a href="https://www.nature.com/articles/s41524-024-01423-2">Article</a>,
           <a href="https://arxiv.org/abs/2312.01291">arXiv</a>
         </span>
       </li>
@@ -136,7 +155,7 @@
         evolutionary algorithm approach for optimizing part quality aware assembly job
         shop scheduling problems. <i>EvoApplications</i> (2021).
         <span class="plinks">
-          <a href="assets/docs/MOEA_Part_AJSSP.pdf">Preprint</a> ·
+          <a href="assets/docs/MOEA_Part_AJSSP.pdf">Preprint</a>,
           <a href="https://link.springer.com/chapter/10.1007/978-3-030-72699-7_7">Article</a>
         </span>
       </li>
@@ -144,7 +163,7 @@
         stable reinforcement learning through ensembled directed mutation.
         <i>EvoApplications</i> (2021).
         <span class="plinks">
-          <a href="assets/docs/EDM_DRL.pdf">Preprint</a> ·
+          <a href="assets/docs/EDM_DRL.pdf">Preprint</a>,
           <a href="https://link.springer.com/chapter/10.1007/978-3-030-72699-7_18">Article</a>
         </span>
       </li>
@@ -225,7 +244,7 @@
     Dsc=(dy1-dy0)*0.40;
     parts=[]; flashes=[];
     ctx.globalCompositeOperation="source-over";
-    ctx.fillStyle="#faf8f2"; ctx.fillRect(0,0,W,H);
+    ctx.fillStyle="#ffffff"; ctx.fillRect(0,0,W,H);
   }
 
   function frame(t,dt){
@@ -265,16 +284,16 @@
 
     /* print render: emulsion plate, ink spots, no glow */
     ctx.globalCompositeOperation="source-over";
-    ctx.fillStyle="rgba(250,248,242,0.35)";
+    ctx.fillStyle="rgba(255,255,255,0.35)";
     ctx.fillRect(0,0,W,H);
 
     ctx.setLineDash([8,20]); ctx.lineDashOffset=-t*60;
-    ctx.strokeStyle="rgba(60,50,38,0.4)"; ctx.lineWidth=1;
+    ctx.strokeStyle="rgba(0,0,0,0.4)"; ctx.lineWidth=1;
     ctx.beginPath(); ctx.moveTo(0,ly); ctx.lineTo(lx,ly); ctx.stroke();
     ctx.setLineDash([]);
 
-    ctx.fillStyle="#fdfcf8";
-    ctx.strokeStyle="#1c1712"; ctx.lineWidth=1.2;
+    ctx.fillStyle="#ffffff";
+    ctx.strokeStyle="#000000"; ctx.lineWidth=1.2;
     ctx.fillRect(dx0,dy0,dx1-dx0,dy1-dy0);
     ctx.strokeRect(dx0,dy0,dx1-dx0,dy1-dy0);
 
@@ -283,8 +302,8 @@
       var ax1=cy_*p[0]+sy_*p[2], az1=-sy_*p[0]+cy_*p[2];
       var ay2=cx_*p[1]-sx_*az1, az2=sx_*p[1]+cx_*az1;
       var depth=(az2+2.4)/4.8;
-      var ac = p[3]===2 ? "rgba(45,36,24,"
-        : (p[3]===1 ? "rgba(130,115,90," : "rgba(75,62,45,");
+      var ac = p[3]===2 ? "rgba(0,0,0,"
+        : (p[3]===1 ? "rgba(120,120,120," : "rgba(50,50,50,");
       ctx.fillStyle=ac+(0.25+0.5*depth).toFixed(3)+")";
       ctx.beginPath();
       ctx.arc(lx+S*ax1, ly+S*ay2, (0.8+1.4*depth)*p[4], 0, TAU);
@@ -295,12 +314,12 @@
       var v=vis[i];
       v.g.flare*=Math.exp(-3*dt);
       var I2=Math.min(1,v.I+v.g.flare*0.8);
-      ctx.fillStyle="rgba(48,38,26,"+(0.08+0.16*I2).toFixed(3)+")";
+      ctx.fillStyle="rgba(0,0,0,"+(0.08+0.16*I2).toFixed(3)+")";
       ctx.beginPath(); ctx.arc(v.px,v.py,2+8*I2,0,TAU); ctx.fill();
-      ctx.fillStyle="rgba(38,30,20,"+(0.35+0.6*I2).toFixed(3)+")";
+      ctx.fillStyle="rgba(0,0,0,"+(0.35+0.6*I2).toFixed(3)+")";
       ctx.beginPath(); ctx.arc(v.px,v.py,1+3*I2,0,TAU); ctx.fill();
     }
-    ctx.fillStyle="rgba(38,30,20,0.85)";
+    ctx.fillStyle="rgba(0,0,0,0.85)";
     ctx.beginPath(); ctx.arc(dcx,dcy,2.2,0,TAU); ctx.fill();
 
     var n=40*dt; n=(n|0)+(Math.random()<n%1?1:0);
@@ -328,7 +347,7 @@
           continue;
         }
       }else{pp.x+=ddx/dl*step;pp.y+=ddy/dl*step;}
-      ctx.strokeStyle="rgba(60,50,38,0.45)"; ctx.lineWidth=1;
+      ctx.strokeStyle="rgba(0,0,0,0.45)"; ctx.lineWidth=1;
       ctx.beginPath();
       ctx.moveTo(pp.x,pp.y);
       ctx.lineTo(pp.x-ddx/dl*10,pp.y-ddy/dl*10);
@@ -340,7 +359,7 @@
       fl.life+=dt;
       if(fl.life>0.35){flashes.splice(i,1);continue;}
       var fr=fl.life/0.35;
-      ctx.strokeStyle="rgba(48,38,26,"+(0.4*(1-fr)).toFixed(3)+")";
+      ctx.strokeStyle="rgba(0,0,0,"+(0.4*(1-fr)).toFixed(3)+")";
       ctx.lineWidth=1;
       ctx.beginPath(); ctx.arc(fl.x,fl.y,2+13*fr,0,TAU); ctx.stroke();
     }
@@ -383,6 +402,59 @@
     requestAnimationFrame(loop);
   }
   requestAnimationFrame(loop);
+})();
+</script>
+
+<script>
+(function(){
+  "use strict";
+  var page=document.querySelector(".page");
+  var gut=document.querySelector(".lineno");
+  var SEL=".abstract, figcaption, h2, .background-copy, .refs li";
+  var pending=false;
+
+  function lineBoxes(el){
+    var lh=parseFloat(getComputedStyle(el).lineHeight)||18;
+    var tol=lh*0.55;
+    var range=document.createRange(); range.selectNodeContents(el);
+    var rects=range.getClientRects(), tops=[], i, j;
+    for(i=0;i<rects.length;i++){
+      var r=rects[i]; if(r.width<1||r.height<1)continue;
+      var mid=r.top+r.height/2, hit=false;
+      for(j=0;j<tops.length;j++){
+        if(Math.abs(tops[j].mid-mid)<tol){
+          tops[j].top=Math.min(tops[j].top,r.top);
+          tops[j].bottom=Math.max(tops[j].bottom,r.bottom);
+          hit=true;break;
+        }
+      }
+      if(!hit)tops.push({mid:mid,top:r.top,bottom:r.bottom});
+    }
+    tops.sort(function(a,b){return a.top-b.top;});
+    return tops;
+  }
+
+  function number(){
+    pending=false;
+    if(getComputedStyle(gut).display==="none"){gut.innerHTML="";return;}
+    var p0=page.getBoundingClientRect().top;
+    var els=page.querySelectorAll(SEL), n=0, html="";
+    for(var i=0;i<els.length;i++){
+      var lines=lineBoxes(els[i]);
+      for(var k=0;k<lines.length;k++){
+        n++;
+        var t=lines[k].top-p0, h=lines[k].bottom-lines[k].top;
+        html+='<span style="top:'+t.toFixed(1)+'px;line-height:'+h.toFixed(1)+'px">'+n+'</span>';
+      }
+    }
+    gut.innerHTML=html;
+  }
+  function schedule(){ if(!pending){pending=true;requestAnimationFrame(number);} }
+
+  new ResizeObserver(schedule).observe(page);
+  window.addEventListener("resize",schedule);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(schedule);
+  schedule();
 })();
 </script>
 
